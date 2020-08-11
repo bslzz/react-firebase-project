@@ -2,7 +2,7 @@ import React from 'react';
 
 const Login = () => {
   return (
-    <div className="row">
+    <div className="row loginForm">
       <div className="col s12 m4 offset-m4">
         <div className="card z-depth-5 hoverable">
           <div className="card-action teal lighten-1 white-text center-align">

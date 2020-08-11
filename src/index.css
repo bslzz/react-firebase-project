@@ -10,6 +10,12 @@
 label {
   font-size: 1.1rem;
 }
-#nav-mobile li a {
-  font-size: 1.1rem;
+.activeNav {
+  color: teal;
+}
+
+.loginForm {
+  display: flex;
+  height: 70vh;
+  align-items: center;
 }

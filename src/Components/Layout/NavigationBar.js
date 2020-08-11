@@ -1,5 +1,7 @@
 import React from 'react';
 import Logo from '../Auth/Logo';
+import RegisteredUserLinks from './RegisteredUserLinks';
+import NonRegisteredUserLinks from './NonRegisteredUserLinks';
 
 const NavigationBar = () => {
   return (
@@ -8,15 +10,8 @@ const NavigationBar = () => {
         <div className="nav-wrapper flow-text">
           <Logo />
           <ul id="nav-mobile" className="right hide-on-med-and-down flow-text">
-            <li>
-              <a href="/login">Login</a>
-            </li>
-            <li>
-              <a href="/register">Register</a>
-            </li>
-            <li>
-              <a href="/logout">Logout</a>
-            </li>
+            <NonRegisteredUserLinks />
+            <RegisteredUserLinks />
           </ul>
         </div>
       </div>
