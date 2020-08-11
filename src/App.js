@@ -6,6 +6,7 @@ import Register from './Components/Auth/Register';
 import LogOut from './Components/Auth/LogOut';
 import Feeds from './Components/HomePage/Feeds';
 import PostDetails from './Components/Posts/PostDetails';
+import CreateNewPost from './Components/Posts/CreateNewPost';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route exact path="/" component={Feeds} />
           <Route path="/logout" component={LogOut} />
           <Route path="/post/:id" component={PostDetails} />
+          <Route path="/create" component={CreateNewPost} />
         </Switch>
       </Router>
     </>

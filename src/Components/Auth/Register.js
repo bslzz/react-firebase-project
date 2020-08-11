@@ -9,19 +9,19 @@ const Register = () => {
             <h3>Register</h3>
           </div>
           <div className="card-content">
-            <div className="form-field">
+            <div className="input-field">
               <label htmlFor="username">Username</label>
               <input type="text" />
             </div>
-            <div className="form-field">
+            <div className="input-field">
               <label htmlFor="password">Password</label>
               <input type="password" />
             </div>
-            <div className="form-field">
+            <div className="input-field">
               <label htmlFor="password">Confirm Password</label>
               <input type="password" />
             </div>
-            <div className="form-field">
+            <div className="input-field">
               <button
                 className="btn-large waves-effect waves-dark"
                 style={{ width: '100%' }}
