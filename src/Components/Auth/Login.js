@@ -10,12 +10,12 @@ const Login = () => {
           </div>
           <div className="card-content">
             <div className="input-field">
-              <label htmlFor="username">Username</label>
-              <input type="text" />
+              <input id="email" type="email" className="validate" />
+              <label htmlFor="email">Email</label>
             </div>
             <div className="input-field">
+              <input id="password" type="password" className="validate" />
               <label htmlFor="password">Password</label>
-              <input type="password" />
             </div>
             <div className="input-field">
               <button

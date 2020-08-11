@@ -13,9 +13,12 @@ const CreateNewPost = () => {
               <label htmlFor="title">Title</label>
               <input type="text" />
             </div>
-            <div class="input-field">
-              <textarea id="textarea1" class="materialize-textarea"></textarea>
-              <label for="textarea1">Content</label>
+            <div className="input-field">
+              <textarea
+                id="textarea1"
+                className="materialize-textarea"
+              ></textarea>
+              <label htmlFor="textarea1">Content</label>
             </div>
 
             <div className="input-field">

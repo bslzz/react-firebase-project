@@ -10,17 +10,22 @@ const Register = () => {
           </div>
           <div className="card-content">
             <div className="input-field">
-              <label htmlFor="username">Username</label>
-              <input type="text" />
+              <input id="first_name" type="text" className="validate" />
+              <label htmlFor="first_name">First Name</label>
+            </div>
+            <div className="input-field">
+              <input id="last_name" type="text" className="validate" />
+              <label htmlFor="last_name">Last Name</label>
+            </div>
+            <div className="input-field">
+              <input id="email" type="email" className="validate" />
+              <label htmlFor="email">Email</label>
             </div>
             <div className="input-field">
               <label htmlFor="password">Password</label>
               <input type="password" />
             </div>
-            <div className="input-field">
-              <label htmlFor="password">Confirm Password</label>
-              <input type="password" />
-            </div>
+
             <div className="input-field">
               <button
                 className="btn-large waves-effect waves-dark"
