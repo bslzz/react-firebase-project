@@ -1,6 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Register = () => {
+  const [newUser, setNewUser] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+  });
+  const { firstName, lastName, email, password } = newUser;
+
+  const registerChange = (e) => {
+    setNewUser({
+      ...newUser,
+      [e.target.name]: e.target.value,
+    });
+  };
+  console.log(newUser);
   return (
     <div className="row loginForm">
       <div className="col s12 m4 offset-m4">
@@ -10,20 +25,48 @@ const Register = () => {
           </div>
           <div className="card-content">
             <div className="input-field">
-              <input id="first_name" type="text" className="validate" />
-              <label htmlFor="first_name">First Name</label>
+              <input
+                id="first_name"
+                type="text"
+                className="validate"
+                onChange={registerChange}
+                name="firstName"
+                value={firstName}
+              />
+              <label htmlFor="firstName">First Name</label>
             </div>
             <div className="input-field">
-              <input id="last_name" type="text" className="validate" />
-              <label htmlFor="last_name">Last Name</label>
+              <input
+                id="last_name"
+                type="text"
+                className="validate"
+                onChange={registerChange}
+                name="lastName"
+                value={lastName}
+              />
+              <label htmlFor="lastName">Last Name</label>
             </div>
             <div className="input-field">
-              <input id="email" type="email" className="validate" />
+              <input
+                id="email"
+                type="email"
+                className="validate"
+                onChange={registerChange}
+                name="email"
+                value={email}
+              />
               <label htmlFor="email">Email</label>
             </div>
             <div className="input-field">
+              <input
+                id="password"
+                type="password"
+                className="validate"
+                onChange={registerChange}
+                name="password"
+                value={password}
+              />
               <label htmlFor="password">Password</label>
-              <input type="password" />
             </div>
 
             <div className="input-field">
