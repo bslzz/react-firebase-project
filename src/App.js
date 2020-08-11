@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import NavigationBar from './Components/Layout/NavigationBar';
 import Login from './Components/Auth/Login';
 import Register from './Components/Auth/Register';
+import LogOut from './Components/Auth/LogOut';
+import Feeds from './Components/HomePage/Feeds';
+import PostDetails from './Components/Posts/PostDetails';
 
 const App = () => {
   return (
@@ -12,6 +15,9 @@ const App = () => {
         <Switch>
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
+          <Route exact path="/" component={Feeds} />
+          <Route path="/logout" component={LogOut} />
+          <Route path="/post/:id" component={PostDetails} />
         </Switch>
       </Router>
     </>
