@@ -23,3 +23,6 @@ label {
 .postCard {
   margin: 1.5rem auto;
 }
+.toggleBar {
+  background-color: rgb(191, 215, 216);
+}
