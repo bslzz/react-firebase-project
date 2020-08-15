@@ -7,6 +7,7 @@ import LogOut from './Components/Auth/LogOut';
 import Feeds from './Components/HomePage/Feeds';
 import PostDetails from './Components/Posts/PostDetails';
 import CreateNewPost from './Components/Posts/CreateNewPost';
+import './FirebaseInit';
 
 const App = () => {
   return (
