@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import Firebase from 'firebase';
 
 const Register = () => {
+  const history = useHistory();
   const [newUser, setNewUser] = useState({
     firstName: '',
     lastName: '',
     email: '',
     password: '',
   });
-  const [registerField, setRegisterField] = useState('');
 
   const { firstName, lastName, email, password } = newUser;
 
@@ -20,8 +22,28 @@ const Register = () => {
 
   const submitRegister = (e) => {
     e.preventDefault();
-    setRegisterField(newUser);
-    console.log(registerField);
+    const M = window.M;
+    Firebase.auth()
+      .createUserWithEmailAndPassword(email, password)
+      .then(() => {
+        M.toast({ html: 'Registration successful', classes: 'green darken-2' });
+        history.push('/login');
+      })
+      .catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        errorCode
+          ? M.toast({
+              html: error.message,
+              classes: 'deep-orange lighten-1',
+            })
+          : M.toast({
+              html: errorMessage,
+              classes: 'deep-orange lighten-1',
+            });
+
+        console.log(error);
+      });
   };
   return (
     <div className="container">

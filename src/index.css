@@ -20,3 +20,6 @@ label {
 .toggleBar {
   background-color: rgb(191, 215, 216);
 }
+#toast-container {
+  top: 10%;
+}

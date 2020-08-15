@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
+import Firebase from 'firebase';
 
 const Login = () => {
   const [userInput, setUserInput] = useState({
     email: '',
     password: '',
   });
-
-  const [loginField, setLoginField] = useState('');
 
   const { email, password } = userInput;
 
@@ -19,9 +18,26 @@ const Login = () => {
 
   const submitLogin = (e) => {
     e.preventDefault();
-    console.log('submitted');
-    console.log(loginField);
-    setLoginField(userInput);
+    const M = window.M;
+    Firebase.auth()
+      .signInWithEmailAndPassword(email, password)
+      .then(() => {
+        console.log('Login Success');
+        M.toast({ html: 'Login Success', classes: 'green darken-2' });
+      })
+      .catch((err) => {
+        console.log(err);
+
+        !email || !password
+          ? M.toast({
+              html: 'Enter all fields',
+              classes: 'deep-orange lighten-1',
+            })
+          : M.toast({
+              html: 'Login Failed',
+              classes: 'deep-orange lighten-1',
+            });
+      });
   };
 
   return (
