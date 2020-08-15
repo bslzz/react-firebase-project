@@ -33,7 +33,7 @@ const Register = () => {
             </div>
             <div className="card-content">
               <div className="input-field">
-                <i class="material-icons prefix">account_circle</i>
+                <i className="material-icons prefix">account_circle</i>
                 <input
                   id="first_name"
                   type="text"
@@ -45,7 +45,7 @@ const Register = () => {
                 <label htmlFor="first_name">First Name</label>
               </div>
               <div className="input-field">
-                <i class="material-icons prefix">account_circle</i>
+                <i className="material-icons prefix">account_circle</i>
                 <input
                   id="last_name"
                   type="text"
@@ -57,7 +57,7 @@ const Register = () => {
                 <label htmlFor="last_name">Last Name</label>
               </div>
               <div className="input-field">
-                <i class="material-icons prefix">mail</i>
+                <i className="material-icons prefix">mail</i>
                 <input
                   id="email"
                   type="email"
@@ -69,7 +69,7 @@ const Register = () => {
                 <label htmlFor="email">Email</label>
               </div>
               <div className="input-field">
-                <i class="material-icons prefix">vpn_key</i>
+                <i className="material-icons prefix">vpn_key</i>
                 <input
                   id="password"
                   type="password"

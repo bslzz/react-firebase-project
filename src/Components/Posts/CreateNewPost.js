@@ -10,12 +10,12 @@ const CreateNewPost = () => {
           </div>
           <div className="card-content">
             <div className="input-field">
-              <i class="material-icons prefix">title</i>
+              <i className="material-icons prefix">title</i>
               <label htmlFor="title">Title</label>
               <input type="text" />
             </div>
             <div className="input-field">
-              <i class="material-icons prefix">insert_comment</i>
+              <i className="material-icons prefix">insert_comment</i>
               <textarea
                 id="textarea1"
                 className="materialize-textarea"

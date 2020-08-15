@@ -34,7 +34,7 @@ const Login = () => {
             </div>
             <div className="card-content">
               <div className="input-field">
-                <i class="material-icons prefix">mail</i>
+                <i className="material-icons prefix">mail</i>
                 <input
                   id="email"
                   type="email"
@@ -46,7 +46,7 @@ const Login = () => {
                 <label htmlFor="email">Email</label>
               </div>
               <div className="input-field">
-                <i class="material-icons prefix">vpn_key</i>
+                <i className="material-icons prefix">vpn_key</i>
                 <input
                   id="password"
                   type="password"
