@@ -14,12 +14,6 @@ label {
   color: teal;
 }
 
-.loginForm {
-  display: flex;
-  height: 70vh;
-  align-items: center;
-}
-
 .postCard {
   margin: 1.5rem auto;
 }
