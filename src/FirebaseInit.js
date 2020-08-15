@@ -1,14 +1,13 @@
 import Firebase from 'firebase';
-
 // Your web app's Firebase configuration
 var firebaseConfig = {
-  apiKey: 'AIzaSyAToqR2uEljtG6Z-RCt6InVC9-4os0PDO8',
-  authDomain: 'redux-learning-690c2.firebaseapp.com',
-  databaseURL: 'https://redux-learning-690c2.firebaseio.com',
-  projectId: 'redux-learning-690c2',
-  storageBucket: 'redux-learning-690c2.appspot.com',
-  messagingSenderId: '303938333049',
-  appId: '1:303938333049:web:4278190d69a311a91be7a8',
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_DB_URL,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
 };
 // Initialize Firebase
 Firebase.initializeApp(firebaseConfig);
