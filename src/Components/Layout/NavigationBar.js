@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import RegisteredUserLinks from './RegisteredUserLinks';
 import NonRegisteredUserLinks from './NonRegisteredUserLinks';
 
-const NavigationBar = () => {
+const NavigationBar = ({ uid }) => {
   const M = window.M;
   document.addEventListener('DOMContentLoaded', function () {
     var elems = document.querySelectorAll('.sidenav');
@@ -24,21 +24,27 @@ const NavigationBar = () => {
               <i className="material-icons">menu</i>
             </NavLink>
             <Logo />
-
-            <ul
-              id="nav-mobile"
-              className="right hide-on-med-and-down flow-text"
-            >
-              <NonRegisteredUserLinks />
-              <RegisteredUserLinks />
-            </ul>
+            {uid ? (
+              <ul id="nav-mobile" className="right hide-on-med-and-down">
+                <RegisteredUserLinks />
+              </ul>
+            ) : (
+              <ul id="nav-mobile" className="right hide-on-med-and-down">
+                <NonRegisteredUserLinks />
+              </ul>
+            )}
           </div>
         </div>
       </nav>
-      <ul className="sidenav toggleBar" id="mobile-demo">
-        <NonRegisteredUserLinks />
-        <RegisteredUserLinks />
-      </ul>
+      {uid ? (
+        <ul className="sidenav toggleBar" id="mobile-demo">
+          <RegisteredUserLinks />
+        </ul>
+      ) : (
+        <ul className="sidenav toggleBar" id="mobile-demo">
+          <NonRegisteredUserLinks />
+        </ul>
+      )}
     </>
   );
 };

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import Firebase from 'firebase';
 
 const Login = () => {
+  const history = useHistory();
   const [userInput, setUserInput] = useState({
     email: '',
     password: '',
@@ -23,6 +25,7 @@ const Login = () => {
       .signInWithEmailAndPassword(email, password)
       .then(() => {
         console.log('Login Success');
+        history.push('/');
         M.toast({ html: 'Login Success', classes: 'green darken-2' });
       })
       .catch((err) => {

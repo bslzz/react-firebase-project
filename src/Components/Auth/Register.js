@@ -25,7 +25,12 @@ const Register = () => {
     const M = window.M;
     Firebase.auth()
       .createUserWithEmailAndPassword(email, password)
-      .then(() => {
+      .then((resp) => {
+        Firebase.firestore().collection('users').doc(resp.user.uid).set({
+          firstName,
+          lastName,
+          email,
+        });
         M.toast({ html: 'Registration successful', classes: 'green darken-2' });
         history.push('/login');
       })
