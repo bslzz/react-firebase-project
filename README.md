@@ -2,4 +2,4 @@
 
 # Project Info
 
-#### User Authentication and creating, updating posts by the authenticated users using **React**, **Redux** `and` **Firebase**
+#### User Authentication and creating, updating posts by the authenticated users using **React** `and` **Firebase**
