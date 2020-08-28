@@ -6,14 +6,12 @@ const RegisteredUserLinks = () => {
   const onLogOut = () => {
     Firebase.auth()
       .signOut()
-      .then(
-        function () {
-          console.log('Signed Out');
-        },
-        function (error) {
-          console.log('Sign Out Error', error);
-        }
-      );
+      .then((resp) => {
+        console.log('User has been logged out');
+      })
+      .catch((err) => {
+        console.log('Some error has occurred while logging out', err);
+      });
   };
 
   return (

@@ -1,9 +1,11 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 
 const LogOut = ({ uid }) => {
-  const history = useHistory();
-  return <div>{uid ? <p>Something is wrong </p> : history.push('/login')}</div>;
+  return (
+    <div>
+      {uid ? <p>Something is wrong </p> : <p>You have been logged out</p>}
+    </div>
+  );
 };
 
 export default LogOut;
