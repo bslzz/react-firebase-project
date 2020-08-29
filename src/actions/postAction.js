@@ -1,6 +1,6 @@
 import Firebase from 'firebase';
 
-import { GET_POSTS, CREATE_POST } from './types';
+import { GET_POSTS, CREATE_POST, DELETE_POST } from './types';
 
 // get all posts
 export const getPosts = () => async (dispatch) => {
@@ -16,7 +16,8 @@ export const getPosts = () => async (dispatch) => {
 export const createPost = (post) => async (dispatch) => {
   await Firebase.firestore()
     .collection('posts')
-    .add(post)
+    .doc()
+    .set(post)
     .then(() => {
       dispatch({
         type: CREATE_POST,

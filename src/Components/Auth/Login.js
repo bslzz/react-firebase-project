@@ -24,8 +24,10 @@ const Login = () => {
       .signInWithEmailAndPassword(email, password)
       .then(() => {
         console.log('Login Success');
-        history.push('/');
+
         M.toast({ html: 'Login Success', classes: 'green darken-2' });
+        history.push('/');
+        history.push('/');
       })
       .catch((err) => {
         console.log(err);

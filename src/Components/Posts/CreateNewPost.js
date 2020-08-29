@@ -17,12 +17,12 @@ const CreateNewPost = ({ uid }) => {
     const new_post = {
       title,
       content,
-      time: new Date(),
+      time: Date.now(),
       user: Firebase.auth().currentUser.uid,
     };
-
-    dispatch(createPost(new_post));
     setPosted(true);
+    dispatch(createPost(new_post));
+
     history.push('/');
   };
 

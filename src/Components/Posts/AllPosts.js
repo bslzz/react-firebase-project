@@ -6,11 +6,10 @@ import { getPosts } from '../../actions/postAction';
 const AllPosts = () => {
   const dispatch = useDispatch();
   const posts = useSelector((state) => state.post.posts);
-  console.log(posts);
 
   useEffect(() => {
     dispatch(getPosts());
-  }, []);
+  }, [dispatch]);
 
   return (
     <>
@@ -18,7 +17,7 @@ const AllPosts = () => {
         ? posts.map((postItem, index) => (
             <PostSummary key={index} postItem={postItem} />
           ))
-        : 'Loading ....'}
+        : 'Loading....'}
     </>
   );
 };
