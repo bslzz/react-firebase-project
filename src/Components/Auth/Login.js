@@ -3,7 +3,6 @@ import { useHistory } from 'react-router-dom';
 import Firebase from 'firebase';
 
 const Login = () => {
-  const history = useHistory();
   const [userInput, setUserInput] = useState({
     email: '',
     password: '',
@@ -17,7 +16,7 @@ const Login = () => {
       [e.target.name]: e.target.value,
     });
   };
-
+  const history = useHistory();
   const submitLogin = (e) => {
     e.preventDefault();
     const M = window.M;
